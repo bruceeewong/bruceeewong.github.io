@@ -25,6 +25,7 @@ ul {
 	margin: 0;
 }
 .wrapper {
+	width: 100%;
 	max-width: 1080px;
 	margin: 0 auto;
 }
@@ -235,9 +236,8 @@ footer {
 
 ul.share-group {
 	display: block;
-	width: 1080px;
-	margin: 0 auto;
-	padding:  50px;
+	width: 100%;
+	/* padding:  50px; */
 }
 
 .share-group li {
