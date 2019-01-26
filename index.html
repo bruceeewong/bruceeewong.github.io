@@ -8,23 +8,33 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <style>
     body {
+      
+    }
+    .wrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       background-image: url('./img/1.jpg');
-      background-size: cover;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 mx-auto mt-5 pt-5">
-        <div class="card">
-          <img src="./img/bruski.jpg" alt="my pic" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Bruski</h5>
-            <p class="card-text">Hey fellas! This is Bruski</p>
-            <div class="text-center mt-5">
-              <a href="https://github.com/bruceeewong" class="btn btn-primary btn-sm">Checkout my github</a>
+  <div class="wrap d-flex justify-content-center align-items-center pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-5 mx-auto">
+          <div class="card shadow-lg">
+            <img src="./img/bruski.jpg" alt="my pic" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Bruski</h5>
+              <p class="card-text">Hey fellas! This is Bruski</p>
+              <div class="text-center mt-5">
+                <a href="https://github.com/bruceeewong" class="btn btn-primary btn-sm">Checkout my github</a>
+              </div>
             </div>
           </div>
         </div>
