@@ -1,48 +1,211 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bruski-Zone</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <style>
-    body {
-      
-    }
-    .wrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: url('./img/1.jpg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap d-flex justify-content-center align-items-center pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-5 mx-auto">
-          <div class="card shadow-lg">
-            <img src="./img/1.jpg" alt="my pic" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Bruski</h5>
-              <p class="card-text">Hey fellas! This is Bruski</p>
-              <div class="text-center mt-5">
-                <a href="https://github.com/bruceeewong" class="btn btn-primary btn-sm">Checkout my github</a>
-              </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bruski's HomePage</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body class="bg-light">
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top"
+    >
+      <a class="navbar-brand" href="/">Bruski</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbar-content"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbar-content" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="//bruski.wang">Blog</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="home-main">
+      <!-- Hero -->
+      <section class="home-jumbotron d-flex flex-column justify-content-center">
+        <h1 class="text-white text-center">Hi, I'm Bruski.</h1>
+        <p class="lead text-white text-center">
+          A Curious Front-end Developer.
+        </p>
+        <p></p>
+      </section>
+      <!-- /Hero -->
+      <!-- Section -->
+      <section class="container home-section">
+        <h2 class="home-section__title">My Experiences</h2>
+        <div class="container home-section__content">
+          <!-- Experience 1 -->
+          <div class="experience row justify-content-md-center">
+            <div class="col-md-2 col-sm-4">
+              <img
+                src="img/tencent-logo.png"
+                alt="Tencent Logo"
+                class="experience-pic rounded"
+              />
+            </div>
+            <div class="experience-content col-md-7 col-sm-8">
+              <h4 class="experience-content__title text-primary">
+                <a href="http://www.tencent.com/" target="_blank">Tencent</a>
+              </h4>
+              <p class="experience-content__p text-success">
+                Operation and Maintenance Developer | 2019/07 - now
+              </p>
+              <p class="experience-content__p text-muted">
+                Tencent is a great Internet company, one of its famous products, WeChat, connects people from all over the world.  
+                In Tencent, my Job is mainly building the UI of the backend management system, visualizing data and providing data service.
+                Within the work I learned how to set up a commonly used frontend development scaffold,
+                how to use Vue to build a management system, and practice some common solutions of management systems. 
+              </p>
+            </div>
+          </div>
+          <!-- /Experience 1 -->
+          <!-- Experience 2 -->
+          <div class="experience row justify-content-md-center">
+            <div class="col-md-2 col-sm-4">
+              <img
+                src="img/tuhu-logo.png"
+                alt="Tuhu Logo"
+                class="experience-pic rounded"
+              />
+            </div>
+            <div class="experience-content col-md-7 col-sm-8">
+              <h4 class="experience-content__title text-primary">
+                <a href="https://www.tuhu.cn" target="_blank">Tuhu</a> 
+              </h4>
+              <p class="experience-content__p text-success">
+                Front-end Engineer Intern | 2018/12 - 2019/01
+              </p>
+              <p class="experience-content__p text-muted">
+                Tuhu is a leading domestic car maintenance service platform in China.
+                I applied a front-end engineer internship when I was a junior for a month. 
+                My job was building static web document pages.
+                At there I firstly worked with teammates and improved my CSS skill.
+                It is fresh start for me to contact real working environment. 
+              </p>
+            </div>
+          </div>
+          <!-- /Experience 2 -->
+          <!-- Experience 3 -->
+          <div class="experience row justify-content-md-center">
+            <div class="col-md-2 col-sm-4">
+              <img
+                src="img/hust-logo.jpg"
+                alt="HUST Logo"
+                class="experience-pic rounded"
+              />
+            </div>
+            <div class="experience-content col-md-7 col-sm-8">
+              <h4 class="experience-content__title text-primary">
+                <a href="http://www.hust.edu.cn/" target="_blank">
+                  Huazhong University of Science & Technology
+                </a>
+              </h4>
+              <p class="experience-content__p text-success">
+                Digital Media - Bachelor's Degree | 2015/09 - 2019/06
+              </p>
+              <p class="experience-content__p text-muted">
+                My Major is Digital Media, which is belong to the software college.
+                We study not only programming knowledge but also art lessons like 3D modeling and gaming design.
+                My graduation project is a 3D game named "Roaming in HUST" using Maya and Unity. 
+                It is a game that player can wander in our virtual campus in 3D mode.
+                By controlling the character walking, riding a motorcycle and even drive a drone, 
+                we can freely visit my beautiful campus. I do it as a gift to memorize my best time in HUST.
+              </p>
+            </div>
+          </div>
+          <!-- /Experience 3 -->
+        </div>
+      </section>
+      <!-- /Section -->
+
+      <!-- Section -->
+      <section class="container home-section">
+        <h2 class="home-section__title">My Skills</h2>
+        <div class="container home-section__content">
+          <div class="row">
+            <div class="skill col-lg-3 col-md-4 col-sm-6 color-html text-white">
+              HTML
+            </div>
+            <div class="skill col-lg-3 col-md-4 col-sm-6 color-css text-white">
+              CSS
+            </div>
+            <div class="skill col-lg-3 col-md-4 col-sm-6 color-js text-white">
+              JavaScript
+            </div>
+            <div class="skill col-lg-3 col-md-4 col-sm-6 color-vue text-white">
+              Vue
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+      <!-- /Section -->
 
-  <script src="./js/jquery-slim.min.js"></script>
-  <script src="./js/bootstrap.js"></script>
-</body>
+      <!-- Section -->
+      <section class="container home-section">
+        <h2 class="home-section__title">My Works</h2>
+        <div class="container home-section__content">
+          <p class="text-center text-muted">
+            Coming Soon...
+          </p>
+        </div>
+      </section>
+      <!-- /Section -->
+
+      <!-- Section -->
+      <section class="container home-section">
+        <h2 class="home-section__title">Contact Me</h2>
+        <div class="container home-section__content">
+          <p class="text-center text-muted">Email: <a href="mailto:bruskiwang@outlook.com">bruskiwang@outlook.com</a></p>
+          <p class="text-center text-muted">Github: <a href="https://github.com/bruceeewong">bruceeewong</a></p>
+        </div>
+      </section>
+      <!-- /Section -->
+    </main>
+
+    <footer class="home-footer">
+      <div class="container text-center text-muted">
+        copyright &copy; <span id="footer-year"></span> Bruski. All rights
+        reserved.
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/home.js"></script>
+  </body>
 </html>
