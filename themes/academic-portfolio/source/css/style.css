@@ -449,6 +449,14 @@ h3 {
 
 .social-links {
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+    }
 }
 
 .social-links a {
