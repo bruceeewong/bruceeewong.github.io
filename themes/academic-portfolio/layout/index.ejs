@@ -1,10 +1,29 @@
 <main class="main-content">
     <section id="intro" class="section">
         <div class="container">
-            <div class="profile">
-                <h2><%= theme.profile.name %></h2>
-                <p><%= theme.profile.title %> | <%= theme.profile.organization %></p>
-                <p><%= theme.profile.department %> | <%= theme.profile.location %></p>
+            <div class="intro-content">
+                <div class="intro-image">
+                    <div class="image-wrapper">
+                        <img src="<%= theme.profile.image %>" alt="<%= theme.profile.name %>" class="profile-image">
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <h1><%= theme.intro.title %></h1>
+                    <div class="title-tags">
+                        <% theme.intro.tags.forEach(function(tag) { %>
+                            <span class="tag"><%= tag %></span>
+                        <% }); %>
+                    </div>
+                    <div class="narrative">
+                        <% theme.intro.narrative.forEach(function(paragraph) { %>
+                            <p><%- paragraph %></p>
+                        <% }); %>
+                    </div>
+                    <div class="quick-links">
+                        <a href="<%= theme.intro.buttons.cv.url %>" class="btn btn-primary"><%= theme.intro.buttons.cv.text %></a>
+                        <a href="<%= theme.intro.buttons.contact.url %>" class="btn btn-secondary"><%= theme.intro.buttons.contact.text %></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -32,7 +51,7 @@
         </div>
     </section>
 
-    <section id="news" class="section">
+    <!-- <section id="news" class="section">
         <div class="container">
             <h2>Latest News</h2>
             <div class="news-list">
@@ -50,7 +69,6 @@
         <div class="container">
             <h2>Awards</h2>
             <div class="awards-list">
-                <!-- Awards will be added here -->
             </div>
         </div>
     </section>
@@ -59,7 +77,6 @@
         <div class="container">
             <h2>Software & Datasets</h2>
             <div class="software-list">
-                <!-- Software and datasets will be added here -->
             </div>
         </div>
     </section>
@@ -68,8 +85,7 @@
         <div class="container">
             <h2>NU WiNS Lab</h2>
             <div class="team-list">
-                <!-- Team information will be added here -->
             </div>
         </div>
-    </section>
+    </section> -->
 </main>

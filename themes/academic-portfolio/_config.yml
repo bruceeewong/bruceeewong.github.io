@@ -15,8 +15,33 @@ profile:
   name: Sizhe Wang
   title: PhD Student
   organization: Northeastern University
-  department: Electrical and Computer Engineering
-  location: Boston, MA, USA
+  department: Department of Electrical and Computer Engineering
+  location: Boston, MA
+  image: /images/25_selfie.jpg
+  cv: /cv.pdf
+
+# Intro Section
+intro:
+  title: Hi, I'm Sizhe Wang
+  tags:
+    - ECE PhD
+    - Networking Researcher
+    - Full-Stack Engineer
+    - Data Analyst
+    - AI Enthusiast
+  narrative:
+    - I am a PhD student of Computer Engineering at Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/koutsonikolas-dimitrios/">Prof. Dimitrios Koutsonikolas</a> in the <a href="https://ece.northeastern.edu/fac-ece/dkoutsonikolas/nuwins/">NUWiNS lab</a>.
+      My research interests span across experimental wireless network studies (5G & LEO satellite networks), mobile and spatial computing, and internet traffic analysis.
+    - Currently, I'm working on concurrent measurement with 5G and LEO satellite networks under mobility across different regions and terrains in US, analyzing the characteristics of digital divide
+      as well as exploring the potential of synergy of 5G and LEO satellite networks.
+    - I'm passionate about bridging the gap between theoretical research and practical applications, always striving to develop solutions that can make a real impact in the field of mobile networked systems.
+  buttons:
+    cv:
+      text: Download CV
+      url: /Sizhe_Wang_CV.pdf
+    contact:
+      text: Contact Me
+      url: mailto:wang.sizh@northeastern.edu
 
 # Research Interests
 research_interests:
