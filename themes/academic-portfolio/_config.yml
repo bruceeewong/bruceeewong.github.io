@@ -2,13 +2,13 @@
 
 # Navigation
 menu:
-  Home: /
+  Portfolio: /
   Research: /#research
   Publications: /#publications
-  News: /#news
-  Awards: /#awards
-  Software: /#software
-  Team: /#team
+  # News: /#news
+  # Awards: /#awards
+  # Software: /#software
+  # Team: /#team
 
 # Profile
 profile:
@@ -45,12 +45,14 @@ intro:
 
 # Research Interests
 research_interests:
-  - Wireless Networks and 5G
-  - Mobile Computing
-  - Open RAN
+  - 5G Network Standards
   - LEO Satellite Networks
-  - VR/AR/XR Technologies
-  - Video Streaming
+  - Internet Routing
+  - Open RAN
+  - Multipath Networking
+  - Mobile Computing
+  - Spatial Video Streaming
+  - XR Technologies
 
 # Social Links
 social:
