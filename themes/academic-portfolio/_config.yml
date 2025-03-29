@@ -6,7 +6,7 @@ theme:
 # Site Configuration
 # Navigation
 menu:
-  Portfolio: /
+  About Me: /#intro
   Research: /#research
   Publications: /#publications
   # News: /#news

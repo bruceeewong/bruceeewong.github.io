@@ -1,6 +1,9 @@
 <header class="site-header">
     <div class="container">
         <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <% for (var i in theme.menu) { %>
                     <li><a href="<%= url_for(theme.menu[i]) %>"><%= i %></a></li>
