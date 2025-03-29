@@ -44,8 +44,79 @@
     <section id="publications" class="section">
         <div class="container">
             <h2>Publications</h2>
+            <!-- Filters -->
+            <div class="publication-filters">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="conference">Conferences</button>
+                <button class="filter-button" data-filter="journal">Journals</button>
+                <button class="filter-button" data-filter="book">Books</button>
+            </div>
+
+            <!-- Publications List -->
             <div class="publications-list">
-                <!-- Publications will be added here -->
+                <% site.data.publications.forEach((pub, index) => { %>
+                    <div class="publication-item" data-type="<%= pub.type %>">
+                        <div class="publication-header">
+                            <h3 class="publication-title">
+                                <%= pub.title %>
+                                <% if (pub.featured) { %>
+                                    <span class="publication-badge">Featured</span>
+                                <% } %>
+                            </h3>
+                            <div class="publication-badges">
+                                <span class="publication-badge"><%= pub.year %></span>
+                                <span class="publication-badge"><%= pub.type %></span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-meta">
+                            <div class="publication-authors">
+                                <% const authors = pub.authors.split(', '); %>
+                                <% authors.forEach((author, index) => { %>
+                                    <% if (author === theme.highlight_name) { %>
+                                        <span class="highlighted-name"><%= author %></span><%= index < authors.length - 1 ? ', ' : '' %>
+                                    <% } else { %>
+                                        <%= author %><%= index < authors.length - 1 ? ', ' : '' %>
+                                    <% } %>
+                                <% }); %>
+                            </div>
+                            <div class="publication-venue">
+                                <%= pub.venue %>
+                                <% if (pub.type === 'conference') { %>
+                                    <span class="badge">Conference</span>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <div class="publication-actions">
+                            <% if (pub.pdf) { %>
+                                <a href="<%= pub.pdf %>" class="publication-action" target="_blank">
+                                    <i class="fas fa-file-pdf"></i> PDF
+                                </a>
+                            <% } %>
+                            <% if (pub.doi) { %>
+                                <a href="https://doi.org/<%= pub.doi %>" class="publication-action" target="_blank">
+                                    <i class="fas fa-link"></i> DOI
+                                </a>
+                            <% } %>
+                            <% if (pub.code) { %>
+                                <a href="<%= pub.code %>" class="publication-action" target="_blank">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            <% } %>
+                            <button class="publication-action citation-copy" data-pub="<%= index %>">
+                                <i class="fas fa-copy"></i> Cite
+                            </button>
+                        </div>
+
+                        <button class="abstract-toggle collapsed">
+                            Show Abstract
+                        </button>
+                        <div class="publication-abstract collapsed">
+                            <%= pub.abstract %>
+                        </div>
+                    </div>
+                <% }); %>
             </div>
         </div>
     </section>
@@ -88,3 +159,61 @@
         </div>
     </section> -->
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Abstract toggle functionality
+    document.querySelectorAll('.abstract-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const abstract = this.nextElementSibling;
+            abstract.classList.toggle('collapsed');
+            this.classList.toggle('collapsed');
+            this.textContent = abstract.classList.contains('collapsed') ? 'Show Abstract' : 'Hide Abstract';
+        });
+    });
+
+    // Filter functionality
+    document.querySelectorAll('.filter-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            
+            // Update active button
+            document.querySelectorAll('.filter-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            // Filter publications
+            document.querySelectorAll('.publication-item').forEach(item => {
+                if (filter === 'all' || item.dataset.type === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Citation copy functionality
+    document.querySelectorAll('.citation-copy').forEach(button => {
+        button.addEventListener('click', function() {
+            const pubIndex = this.dataset.pub;
+            const publications = <%- JSON.stringify(site.data.publications) %>;
+            const pub = publications[pubIndex];
+            
+            // Generate ACM citation
+            const acmCitation = `${pub.authors}. ${pub.year}. ${pub.title}. In ${pub.venue}.`;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(acmCitation).then(() => {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                }, 2000);
+            });
+        });
+    });
+});
+</script>
+

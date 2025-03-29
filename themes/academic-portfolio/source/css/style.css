@@ -435,7 +435,183 @@ h3 {
     color: #ccc;
 }
 
-/* Responsive Design */
+/* Publications Section */
+.publications {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.publication-item {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(26, 54, 93, 0.1);
+    border: 1px solid rgba(26, 54, 93, 0.1);
+    transition: var(--transition);
+}
+
+.publication-item:hover {
+    box-shadow: 0 4px 8px rgba(26, 54, 93, 0.15);
+    transform: translateY(-2px);
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.publication-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.publication-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.publication-authors {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.publication-authors .highlighted-name {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.publication-venue {
+    font-style: italic;
+    color: var(--secondary-color);
+    line-height: 1.4;
+}
+
+.publication-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.publication-badge {
+    background-color: var(--section-bg);
+    color: var(--secondary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.publication-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.publication-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    background-color: var(--section-bg);
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.publication-action:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.publication-abstract {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(26, 54, 93, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.publication-abstract.collapsed {
+    display: none;
+}
+
+.abstract-toggle {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.abstract-toggle:hover {
+    color: var(--primary-color);
+}
+
+.abstract-toggle::before {
+    content: '▼';
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+    margin-right: 0.4rem;
+}
+
+.abstract-toggle.collapsed::before {
+    transform: rotate(-90deg);
+}
+
+/* Publication Filters */
+.publication-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    background: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .main-nav ul {
         flex-direction: column;
@@ -493,5 +669,19 @@ h3 {
     
     .research-interests li {
         padding: 1rem;
+    }
+
+    .publication-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .publication-actions {
+        flex-wrap: wrap;
+    }
+    
+    .publication-action {
+        flex: 1 1 calc(50% - 0.5rem);
+        justify-content: center;
     }
 }

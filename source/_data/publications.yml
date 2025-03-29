@@ -1,0 +1,26 @@
+- title: "Spatial Video Streaming on Apple Vision Pro XR Headset"
+  authors: "Guodong Chen, Sizhe Wang, Jacob Chakareski, Dimitrios Koutsonikolas, Mallesham Dasari"
+  year: "2025"
+  venue: "Proceedings of the 26th International Workshop on Mobile Computing Systems and Applications (HotMobile '25)"
+  type: "conference"
+  abstract: "Apple recently unveiled capturing spatial video experiences on an iPhone and their extended reality (XR) headset Vision Pro. Spatial videos can be viewed on immersive near-eye displays like the Apple Vision Pro for a more realistic experience with depth perception. However, streaming spatial videos encounters several challenges, such as bandwidth limitations, latency, and synchronization issues between multiple camera views. This position paper presents a comprehensive research agenda to address these issues and make spatial video streaming as ubiquitous as traditional online video for mobile systems and applications. We outline several research threads for exploration and discuss a series of novel ideas, including view-adaptive streaming strategies, multipath support, and QoE modeling, which we believe will become the fundamental components for future video experiences on mobile and wearable devices."
+  doi: "10.1145/3708468.3711878"
+  featured: false
+
+- title: "A First Look at Apple's Stereoscopic Video and its Potential in Live Video Streaming for XR Headsets"
+  authors: "Sizhe Wang, Mingkun Liu, Mallesham Dasari, Dimitrios Koutsonikolas"
+  year: "2024"
+  venue: "Proceedings of the 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '24)"
+  type: "conference"
+  abstract: "With the evolution of stereoscopic video technology, live video streaming stands at the threshold of a more engaging and immersive future. Apple's recent innovations in video and Extended Reality (XR) technologies have paved the way for immersive live video experiences. This work characterizes Apple's spatial video and explores its potential in live video streaming, providing insights into the future of video streaming applications."
+  doi: "10.1145/3636534.3697437"
+  featured: false
+
+- title: "The Power of Asynchronous SLAM in Multi-User AR over Cellular Networks: A Measurement Study"
+  authors: "Yuting Guo, Sizhe Wang, Moinak Ghoshal, Y Charlie Hu, Dimitrios Koutsonikolas"
+  year: "2023"
+  venue: "Proceedings of the 2023 Workshop on Emerging Multimedia Systems (EMS '23)"
+  type: "conference"
+  abstract: "With the rapid deployment of 5G, an important question is whether 5G can support latency-critical apps such as multi-user AR, which allows multiple users to interact in the same physical space in real time. Recent studies showed that a popular multi-user cloud-based AR app (Cloud Anchor) suffers long end-to-end (E2E) latency in multi-user interactions under both LTE or 5G and hence cannot be supported by today's cellular networks. In this paper, we revisit the feasibility of multi-user AR over wireless networks by experimenting with another popular multi-user AR app, Just a Line, and find that its E2E latency is in the order of a few 100s of ms over both LTE and 5G, making real-time multi-user interactions feasible. We conduct a detailed measurement study of the Just a Line app over cellular networks and uncover the drastic user-perceived performance difference between the two multi-user apps stems from two fundamentally different architecture designs of performing SLAM: asynchronous vs. synchronous updates."
+  doi: "10.1145/3609395.3610598"
+  featured: false
