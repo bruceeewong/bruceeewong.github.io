@@ -201,11 +201,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const publications = <%- JSON.stringify(site.data.publications) %>;
             const pub = publications[pubIndex];
             
-            // Generate ACM citation (without highlighting)
-            const acmCitation = `${pub.authors}. ${pub.year}. ${pub.title}. In ${pub.venue}.`;
+            // Generate ACM BibTeX citation
+            const bibtex = `@inproceedings{${pub.title.toLowerCase().replace(/[^a-z0-9]/g, '')}${pub.year},
+  title={${pub.title}},
+  author={${pub.authors}},
+  booktitle={${pub.venue}},
+  year={${pub.year}},
+  doi={${pub.doi}}
+}`;
             
             // Copy to clipboard
-            navigator.clipboard.writeText(acmCitation).then(() => {
+            navigator.clipboard.writeText(bibtex).then(() => {
                 const originalText = this.innerHTML;
                 this.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 setTimeout(() => {
