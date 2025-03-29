@@ -3,12 +3,12 @@
 # Navigation
 menu:
   Home: /
-  Research: /research/
-  Publications: /publications/
-  News: /news/
-  Awards: /awards/
-  Software: /software/
-  Team: /team/
+  Research: /#research
+  Publications: /#publications
+  News: /#news
+  Awards: /#awards
+  Software: /#software
+  Team: /#team
 
 # Profile
 profile:
