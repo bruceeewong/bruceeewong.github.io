@@ -73,7 +73,7 @@
                             <div class="publication-authors">
                                 <% const authors = pub.authors.split(', '); %>
                                 <% authors.forEach((author, index) => { %>
-                                    <% if (author === theme.highlight_name) { %>
+                                    <% if (author.trim() === theme.publication.highlight_name.trim()) { %>
                                         <span class="highlighted-name"><%= author %></span><%= index < authors.length - 1 ? ', ' : '' %>
                                     <% } else { %>
                                         <%= author %><%= index < authors.length - 1 ? ', ' : '' %>
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const publications = <%- JSON.stringify(site.data.publications) %>;
             const pub = publications[pubIndex];
             
-            // Generate ACM citation
+            // Generate ACM citation (without highlighting)
             const acmCitation = `${pub.authors}. ${pub.year}. ${pub.title}. In ${pub.venue}.`;
             
             // Copy to clipboard

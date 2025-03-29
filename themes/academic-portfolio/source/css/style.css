@@ -70,7 +70,7 @@ body {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     transition: var(--transition);
 }
 
@@ -165,13 +165,14 @@ body {
 }
 
 .narrative a {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .narrative a:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .quick-links {
@@ -489,8 +490,7 @@ h3 {
 
 .publication-authors .highlighted-name {
     color: var(--primary-color);
-    font-weight: 600;
-    font-style: italic;
+    font-weight: 700;
 }
 
 .publication-venue {

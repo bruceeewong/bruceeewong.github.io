@@ -2,10 +2,6 @@
 theme:
   name: "academic-portfolio"
   author: "Sizhe Wang"
-  highlight_name: "Sizhe Wang"  # Name to highlight in publications
-  highlight_color: "#1a1a1a"    # Color for highlighted name
-  highlight_weight: "600"       # Font weight for highlighted name
-  highlight_style: "italic"     # Font style for highlighted name
 
 # Site Configuration
 # Navigation
@@ -61,6 +57,9 @@ research_interests:
   - Mobile Computing
   - Spatial Video Streaming
   - XR Technologies
+
+publication:
+  highlight_name: "Sizhe Wang"  # Name to highlight in publications
 
 # Social Links
 social:
