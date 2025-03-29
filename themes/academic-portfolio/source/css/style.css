@@ -166,13 +166,13 @@ body {
 
 .narrative a {
     color: var(--secondary-color);
-    text-decoration: none;
+    text-decoration: underline;
     transition: var(--transition);
 }
 
 .narrative a:hover {
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .quick-links {
@@ -462,7 +462,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
 }
 
 .publication-title {
@@ -477,7 +477,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 0.75rem 0;
+    margin: 0.4rem 0;
     font-size: 0.9rem;
     color: var(--text-color);
 }
