@@ -7,6 +7,7 @@ theme:
   highlight_weight: "600"       # Font weight for highlighted name
   highlight_style: "italic"     # Font style for highlighted name
 
+# Site Configuration
 # Navigation
 menu:
   Portfolio: /
@@ -71,4 +72,4 @@ social:
 # Footer
 footer:
   copyright: Sizhe Wang
-  powered_by: Powered by Hexo & Claude AI 💫
+  powered_by: Powered by Hexo & Cursor with Claude AI 💫
