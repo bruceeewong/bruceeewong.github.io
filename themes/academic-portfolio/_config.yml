@@ -1,0 +1,40 @@
+# Theme Configuration
+
+# Navigation
+menu:
+  Home: /
+  Research: /research/
+  Publications: /publications/
+  News: /news/
+  Awards: /awards/
+  Software: /software/
+  Team: /team/
+
+# Profile
+profile:
+  name: Sizhe Wang
+  title: PhD Student
+  organization: Northeastern University
+  department: Electrical and Computer Engineering
+  location: Boston, MA, USA
+
+# Research Interests
+research_interests:
+  - Wireless Networks and 5G
+  - Mobile Computing
+  - Open RAN
+  - LEO Satellite Networks
+  - VR/AR/XR Technologies
+  - Video Streaming
+
+# Social Links
+social:
+  google_scholar: https://scholar.google.com/citations?hl=en&user=mGlCQZkAAAAJ
+  linkedin: https://www.linkedin.com/in/sizhewang97
+  github: https://github.com/bruceeewong
+  email: wang.sizh@northeastern.edu
+
+# Footer
+footer:
+  copyright: Sizhe Wang
+  powered_by: Powered by Hexo & Claude AI 💫

@@ -1,0 +1,76 @@
+<main class="main-content">
+    <section id="intro" class="section">
+        <div class="container">
+            <h1><%= config.title %></h1>
+            <div class="profile">
+                <h2><%= theme.profile.name %></h2>
+                <p><%= theme.profile.title %> | <%= theme.profile.organization %></p>
+                <p><%= theme.profile.department %> | <%= theme.profile.location %></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <div class="container">
+            <h2>Research</h2>
+            <div class="research-interests">
+                <h3>Research Interests</h3>
+                <ul>
+                    <% theme.research_interests.forEach(function(interest) { %>
+                        <li><%= interest %></li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <div class="container">
+            <h2>Publications</h2>
+            <div class="publications-list">
+                <!-- Publications will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="news-list">
+                <% site.posts.sort('date', -1).limit(5).forEach(function(post) { %>
+                    <article class="news-item">
+                        <time><%= date(post.date, 'YYYY-MM-DD') %></time>
+                        <h3><a href="<%= url_for(post.path) %>"><%= post.title %></a></h3>
+                    </article>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="section">
+        <div class="container">
+            <h2>Awards</h2>
+            <div class="awards-list">
+                <!-- Awards will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="software" class="section">
+        <div class="container">
+            <h2>Software & Datasets</h2>
+            <div class="software-list">
+                <!-- Software and datasets will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <h2>NU WiNS Lab</h2>
+            <div class="team-list">
+                <!-- Team information will be added here -->
+            </div>
+        </div>
+    </section>
+</main>
