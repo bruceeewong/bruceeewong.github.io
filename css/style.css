@@ -10,6 +10,12 @@
     --header-height: 60px;
     --border-radius: 8px;
     --transition: all 0.3s ease;
+    --link-color: #63b3ed;       /* Light blue for better contrast */
+}
+@media (max-width: 768px) {
+    :root {
+        --header-height: 40px;
+    }
 }
 
 html {
@@ -24,6 +30,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* a:visited {
+    color: var(--link-color);
+} */
 
 .container {
     max-width: 1200px;
@@ -44,6 +54,13 @@ body {
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .main-nav ul {
@@ -70,7 +87,7 @@ body {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--link-color);
     transition: var(--transition);
 }
 
@@ -78,12 +95,35 @@ body {
     width: 100%;
 }
 
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.fa-bars, .fa-times {
+    color: white;
+}
+
 /* Main Content */
 .main-content {
     margin-top: var(--header-height);
     padding-top: 1rem;
 }
-
 /* Intro Section */
 .intro-content {
     display: grid;
@@ -418,6 +458,14 @@ h3 {
 
 .social-links {
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+    }
 }
 
 .social-links a {
@@ -428,7 +476,7 @@ h3 {
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    color: var(--link-color);
 }
 
 .copyright {
@@ -611,16 +659,53 @@ h3 {
     color: white;
 }
 
-/* Responsive adjustments */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
     }
-    
+
+    .main-nav ul {
+        display: none;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .main-nav ul.active {
+        display: block;
+    }
+
+    .main-nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+    .main-nav ul li a:hover {
+        color: var(--link-color);
+    }
+
     .section {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
     
     .profile h2 {
