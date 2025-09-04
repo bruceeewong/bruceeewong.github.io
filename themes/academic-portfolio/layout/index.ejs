@@ -92,14 +92,6 @@
                             </div>
                         </div>
                         
-                        <% if (pub.tags && pub.tags.length > 0) { %>
-                        <div class="publication-tags">
-                            <% pub.tags.forEach(tag => { %>
-                                <span class="tag-badge" data-tag="<%= tag %>"><%= tag %></span>
-                            <% }); %>
-                        </div>
-                        <% } %>
-                        
                         <div class="publication-meta">
                             <div class="publication-authors">
                                 <% const authors = pub.authors.split(', '); %>
@@ -118,6 +110,14 @@
                                 <% } %>
                             </div>
                         </div>
+                        
+                        <% if (pub.tags && pub.tags.length > 0) { %>
+                        <div class="publication-tags">
+                            <% pub.tags.forEach(tag => { %>
+                                <span class="tag-badge" data-tag="<%= tag %>"><%= tag %></span>
+                            <% }); %>
+                        </div>
+                        <% } %>
 
                         <div class="publication-actions">
                             <% if (pub.pdf) { %>

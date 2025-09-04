@@ -552,14 +552,20 @@ h3 {
     gap: 0.5rem;
     /* margin-top: 0.5rem; */
 }
+@media (max-width: 768px) {
+    .publication-badges {
+        gap: 0;
+    }
+}
 
 .publication-badge {
     background-color: var(--section-bg);
     color: var(--secondary-color);
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .publication-actions {
@@ -609,7 +615,7 @@ h3 {
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     margin: 0;
     display: flex;
     align-items: center;
@@ -670,7 +676,7 @@ h3 {
 .tag-filters {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     position: relative;
 }
@@ -689,13 +695,14 @@ h3 {
 .selected-tag {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
-    padding: 0.25rem 0.75rem;
+    gap: 0.2rem;
+    padding: 0.2rem 0.5rem;
     background-color: var(--secondary-color);
     color: white;
-    border-radius: 20px;
-    font-size: 0.875rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .selected-tag:hover {
@@ -741,12 +748,13 @@ h3 {
 }
 
 .tag-option {
-    padding: 0.375rem 0.75rem;
+    padding: 0.2rem 0.5rem;
     border: 1px solid #e2e8f0;
-    border-radius: 20px;
+    border-radius: 12px;
     background: white;
     color: var(--text-color);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
 }
@@ -765,26 +773,29 @@ h3 {
 /* Publication Tags Display */
 .publication-tags {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.35rem;
     flex-wrap: wrap;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .tag-badge {
     display: inline-block;
-    padding: 0.25rem 0.625rem;
-    background-color: #edf2f7;
-    color: var(--text-color);
-    border-radius: 12px;
-    font-size: 0.8rem;
+    padding: 0.15rem 0.45rem;
+    background-color: #f7f9fc;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
+    line-height: 1.3;
 }
 
 .tag-badge:hover {
     background-color: var(--secondary-color);
     color: white;
+    border-color: var(--secondary-color);
 }
 
 /* Mobile Menu Styles */
