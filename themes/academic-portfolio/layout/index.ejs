@@ -56,17 +56,29 @@
             <h2>Publications</h2>
             <!-- Filters -->
             <div class="publication-filters">
-                <button class="filter-button active" data-filter="all">All</button>
-                <button class="filter-button" data-filter="workshop">Workshops</button>
-                <button class="filter-button" data-filter="poster">Posters</button>
-                <!-- <button class="filter-button" data-filter="journal">Journals</button> -->
-                <!-- <button class="filter-button" data-filter="book">Books</button> -->
+                <div class="type-filters">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="workshop">Workshops</button>
+                    <button class="filter-button" data-filter="poster">Posters</button>
+                    <!-- <button class="filter-button" data-filter="journal">Journals</button> -->
+                    <!-- <button class="filter-button" data-filter="book">Books</button> -->
+                </div>
+                <div class="tag-filters">
+                    <span class="tag-filter-label">Tags:</span>
+                    <div class="selected-tags"></div>
+                    <button class="tag-dropdown-toggle">
+                        <i class="fas fa-tags"></i> Filter by Tags
+                    </button>
+                    <div class="tag-dropdown" style="display: none;">
+                        <div class="tag-dropdown-content"></div>
+                    </div>
+                </div>
             </div>
 
             <!-- Publications List -->
             <div class="publications-list">
                 <% site.data.publications.forEach((pub, index) => { %>
-                    <div class="publication-item" data-type="<%= pub.type %>">
+                    <div class="publication-item" data-type="<%= pub.type %>" data-tags="<%= pub.tags ? pub.tags.join(',') : '' %>">
                         <div class="publication-header">
                             <h3 class="publication-title">
                                 <%= pub.title %>
@@ -79,6 +91,14 @@
                                 <span class="publication-badge"><%= pub.type %></span>
                             </div>
                         </div>
+                        
+                        <% if (pub.tags && pub.tags.length > 0) { %>
+                        <div class="publication-tags">
+                            <% pub.tags.forEach(tag => { %>
+                                <span class="tag-badge" data-tag="<%= tag %>"><%= tag %></span>
+                            <% }); %>
+                        </div>
+                        <% } %>
                         
                         <div class="publication-meta">
                             <div class="publication-authors">
@@ -173,6 +193,119 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tag filtering system
+    let selectedTags = new Set();
+    let activeTypeFilter = 'all';
+    
+    // Collect all unique tags
+    const allTags = new Set();
+    document.querySelectorAll('.publication-item').forEach(item => {
+        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+        tags.forEach(tag => {
+            if (tag) allTags.add(tag);
+        });
+    });
+    
+    // Populate tag dropdown
+    const tagDropdownContent = document.querySelector('.tag-dropdown-content');
+    if (tagDropdownContent) {
+        Array.from(allTags).sort().forEach(tag => {
+            const tagOption = document.createElement('span');
+            tagOption.className = 'tag-option';
+            tagOption.textContent = tag;
+            tagOption.dataset.tag = tag;
+            
+            // Add click handler for each tag option
+            tagOption.addEventListener('click', function() {
+                const tag = this.dataset.tag;
+                if (selectedTags.has(tag)) {
+                    selectedTags.delete(tag);
+                    this.classList.remove('selected');
+                } else {
+                    selectedTags.add(tag);
+                    this.classList.add('selected');
+                }
+                updateSelectedTagsDisplay();
+                filterPublications();
+            });
+            
+            tagDropdownContent.appendChild(tagOption);
+        });
+    }
+    
+    // Tag dropdown toggle
+    const tagDropdownToggle = document.querySelector('.tag-dropdown-toggle');
+    const tagDropdown = document.querySelector('.tag-dropdown');
+    if (tagDropdownToggle && tagDropdown) {
+        tagDropdownToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            tagDropdown.style.display = tagDropdown.style.display === 'none' ? 'block' : 'none';
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            tagDropdown.style.display = 'none';
+        });
+        
+        tagDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+    
+    // Tag badge click handler (in publications)
+    document.querySelectorAll('.tag-badge').forEach(badge => {
+        badge.addEventListener('click', function() {
+            const tag = this.dataset.tag;
+            if (!selectedTags.has(tag)) {
+                selectedTags.add(tag);
+                document.querySelector(`.tag-option[data-tag="${tag}"]`)?.classList.add('selected');
+                updateSelectedTagsDisplay();
+                filterPublications();
+            }
+        });
+    });
+    
+    // Update selected tags display
+    function updateSelectedTagsDisplay() {
+        const selectedTagsContainer = document.querySelector('.selected-tags');
+        selectedTagsContainer.innerHTML = '';
+        
+        selectedTags.forEach(tag => {
+            const tagElement = document.createElement('span');
+            tagElement.className = 'selected-tag';
+            tagElement.innerHTML = `${tag} <i class="fas fa-times"></i>`;
+            tagElement.addEventListener('click', function() {
+                selectedTags.delete(tag);
+                document.querySelector(`.tag-option[data-tag="${tag}"]`)?.classList.remove('selected');
+                updateSelectedTagsDisplay();
+                filterPublications();
+            });
+            selectedTagsContainer.appendChild(tagElement);
+        });
+    }
+    
+    // Combined filter function
+    function filterPublications() {
+        document.querySelectorAll('.publication-item').forEach(item => {
+            const type = item.dataset.type;
+            const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+            
+            // Check type filter
+            const passesTypeFilter = activeTypeFilter === 'all' || type === activeTypeFilter;
+            
+            // Check tag filter
+            const passesTagFilter = selectedTags.size === 0 || 
+                Array.from(selectedTags).some(tag => tags.includes(tag));
+            
+            // Show/hide based on both filters
+            if (passesTypeFilter && passesTagFilter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
     // Abstract toggle functionality
     document.querySelectorAll('.abstract-toggle').forEach(toggle => {
         toggle.addEventListener('click', function() {
@@ -183,10 +316,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Filter functionality
+    // Type filter functionality
     document.querySelectorAll('.filter-button').forEach(button => {
         button.addEventListener('click', function() {
-            const filter = this.dataset.filter;
+            activeTypeFilter = this.dataset.filter;
             
             // Update active button
             document.querySelectorAll('.filter-button').forEach(btn => {
@@ -194,14 +327,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             this.classList.add('active');
 
-            // Filter publications
-            document.querySelectorAll('.publication-item').forEach(item => {
-                if (filter === 'all' || item.dataset.type === filter) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            // Apply combined filters
+            filterPublications();
         });
     });
 
