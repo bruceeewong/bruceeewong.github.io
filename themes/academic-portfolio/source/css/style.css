@@ -893,12 +893,31 @@ h3 {
     }
 
     .research-interests ul {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
     }
     
     .research-interests li {
-        padding: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        text-align: left;
+        min-height: auto;
+        border-left: 3px solid var(--secondary-color);
+        border-radius: 4px;
+        background: linear-gradient(to right, rgba(44, 82, 130, 0.05), transparent);
+    }
+    
+    .research-interests li::before {
+        display: none;
+    }
+    
+    .research-interests li:hover {
+        transform: translateX(5px);
+        box-shadow: 0 2px 8px rgba(26, 54, 93, 0.1);
     }
 
     .publication-header {
@@ -920,3 +939,4 @@ h3 {
         margin-bottom: 1rem;
     }
 }
+
