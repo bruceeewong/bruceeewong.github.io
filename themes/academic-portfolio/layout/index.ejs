@@ -51,6 +51,29 @@
         </div>
     </section>
 
+    <section id="news" class="section">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="news-container">
+                <div class="news-list">
+                    <% site.data.news.forEach((item, index) => { %>
+                        <div class="news-item">
+                            <span class="news-date"><%= item.date %></span>
+                            <span class="news-content">
+                                <% if (item.link) { %>
+                                    <a href="<%= item.link %>"><%= item.title %></a>
+                                <% } else { %>
+                                    <%= item.title %>
+                                <% } %>
+                            </span>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="publications" class="section">
         <div class="container">
             <h2>Publications</h2>
@@ -152,21 +175,7 @@
         </div>
     </section>
 
-    <!-- <section id="news" class="section">
-        <div class="container">
-            <h2>Latest News</h2>
-            <div class="news-list">
-                <% site.posts.sort('date', -1).limit(5).forEach(function(post) { %>
-                    <article class="news-item">
-                        <time><%= date(post.date, 'YYYY-MM-DD') %></time>
-                        <h3><a href="<%= url_for(post.path) %>"><%= post.title %></a></h3>
-                    </article>
-                <% }); %>
-            </div>
-        </div>
-    </section>
-
-    <section id="awards" class="section">
+    <!-- <section id="awards" class="section">
         <div class="container">
             <h2>Awards</h2>
             <div class="awards-list">
