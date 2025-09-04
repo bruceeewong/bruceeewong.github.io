@@ -455,8 +455,8 @@ h3 {
 }
 
 .timeline-dot {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
     background: var(--secondary-color);
     border: 3px solid white;
     border-radius: 50%;
@@ -466,6 +466,37 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+}
+
+/* Category-specific dot colors */
+.timeline-item[data-category="position"] .timeline-dot {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 0 0 2px #667eea;
+}
+
+.timeline-item[data-category="publication"] .timeline-dot {
+    background: linear-gradient(135deg, #0d6157 0%, #11998e 100%);
+    box-shadow: 0 0 0 2px #0d6157;
+}
+
+.timeline-item[data-category="award"] .timeline-dot {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    box-shadow: 0 0 0 2px #ff6b6b;
+}
+
+.timeline-item[data-category="phd"] .timeline-dot {
+    background: #6c757d;
+    box-shadow: 0 0 0 2px #6c757d;
+}
+
+.timeline-item[data-category="achievement"] .timeline-dot {
+    background: #17a2b8;
+    box-shadow: 0 0 0 2px #17a2b8;
 }
 
 .timeline-connector {
@@ -505,12 +536,123 @@ h3 {
     transform: translateX(-50%);
 }
 
+/* Highlighted Category Cards */
+.timeline-item[data-category="position"] .timeline-card,
+.timeline-item[data-category="publication"] .timeline-card,
+.timeline-item[data-category="award"] .timeline-card {
+    box-shadow: 0 4px 16px rgba(26, 54, 93, 0.15);
+    border-width: 2px;
+}
+
+/* Position Category - Blue Gradient */
+.timeline-item[data-category="position"] .timeline-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+}
+
+.timeline-item[data-category="position"] .timeline-date,
+.timeline-item[data-category="position"] .timeline-title {
+    color: white;
+}
+
+.timeline-item[data-category="position"] .timeline-title a {
+    color: #e6f3ff;
+}
+
+.timeline-item[data-category="position"] .timeline-title a:hover {
+    color: white;
+}
+
+/* Publication Category - Green Gradient */
+.timeline-item[data-category="publication"] .timeline-card {
+    background: linear-gradient(135deg, #0d6157 0%, #11998e 100%);
+    border-color: #0d6157;
+    color: white;
+}
+
+.timeline-item[data-category="publication"] .timeline-date,
+.timeline-item[data-category="publication"] .timeline-title {
+    color: white;
+}
+
+.timeline-item[data-category="publication"] .timeline-title a {
+    color: #e6fff9;
+}
+
+.timeline-item[data-category="publication"] .timeline-title a:hover {
+    color: white;
+}
+
+/* Award Category - Gold Gradient */
+.timeline-item[data-category="award"] .timeline-card {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-color: #f093fb;
+    color: white;
+}
+
+.timeline-item[data-category="award"] .timeline-date,
+.timeline-item[data-category="award"] .timeline-title {
+    color: white;
+}
+
+.timeline-item[data-category="award"] .timeline-title a {
+    color: #fff0f4;
+}
+
+.timeline-item[data-category="award"] .timeline-title a:hover {
+    color: white;
+}
+
+/* Regular Category Cards - Subtle Styling */
+.timeline-item[data-category="phd"] .timeline-card,
+.timeline-item[data-category="achievement"] .timeline-card {
+    background: #fafbfc;
+    border-color: #e8eaed;
+}
+
+/* PhD Category - Soft Gray */
+.timeline-item[data-category="phd"] .timeline-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-color: #dee2e6;
+}
+
+.timeline-item[data-category="phd"] .timeline-date {
+    color: #6c757d;
+}
+
+.timeline-item[data-category="phd"] .timeline-title {
+    color: #495057;
+}
+
+/* Achievement Category - Light Blue */
+.timeline-item[data-category="achievement"] .timeline-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e6f3ff 100%);
+    border-color: #b3d9ff;
+}
+
+.timeline-item[data-category="achievement"] .timeline-date {
+    color: #0066cc;
+}
+
+.timeline-item[data-category="achievement"] .timeline-title {
+    color: #004499;
+}
+
+.timeline-item[data-category="achievement"] .timeline-title a {
+    color: #0066cc;
+}
+
+.timeline-item[data-category="achievement"] .timeline-title a:hover {
+    color: #004499;
+}
+
 .timeline-item.above .timeline-card {
-    bottom: calc(50% + 66px); /* 50% + dot radius + connector height + spacing */
+    bottom: calc(50% + 46px); /* 50% + dot radius + connector height + spacing */
 }
 
 .timeline-item.below .timeline-card {
-    top: calc(50% + 66px); /* 50% + dot radius + connector height + spacing */
+    top: calc(50% + 46px); /* 50% + dot radius + connector height + spacing */
 }
 
 .timeline-card:hover {

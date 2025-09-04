@@ -53,14 +53,39 @@
 
     <section id="news" class="section">
         <div class="container">
-            <h2>Latest News</h2>
+            <h2>Milestones</h2>
             <div class="timeline-container">
                 <div class="timeline-scroll">
                     <div class="timeline-spine"></div>
                     <div class="timeline-content">
                         <% site.data.news.forEach((item, index) => { %>
-                            <div class="timeline-item <%= index % 2 === 0 ? 'above' : 'below' %>">
-                                <div class="timeline-dot"></div>
+                            <div class="timeline-item <%= index % 2 === 0 ? 'above' : 'below' %>" data-category="<%= item.category %>">
+                                <div class="timeline-dot">
+                                    <% 
+                                    // Map categories to their icons
+                                    let iconClass = '';
+                                    switch(item.category) {
+                                        case 'position':
+                                            iconClass = 'fas fa-briefcase';
+                                            break;
+                                        case 'publication':
+                                            iconClass = 'fas fa-file-alt';
+                                            break;
+                                        case 'award':
+                                            iconClass = 'fas fa-trophy';
+                                            break;
+                                        case 'phd':
+                                            iconClass = 'fas fa-graduation-cap';
+                                            break;
+                                        case 'achievement':
+                                            iconClass = 'fas fa-star';
+                                            break;
+                                        default:
+                                            iconClass = 'fas fa-info-circle';
+                                    }
+                                    %>
+                                    <i class="<%= iconClass %>"></i>
+                                </div>
                                 <div class="timeline-card">
                                     <div class="timeline-date"><%= item.date %></div>
                                     <div class="timeline-title">
@@ -365,11 +390,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Generate ACM BibTeX citation
             const bibtex = `@inproceedings{${pub.title.toLowerCase().replace(/[^a-z0-9]/g, '')}${pub.year},
-  title={${pub.title}},
-  author={${pub.authors}},
-  booktitle={${pub.venue}},
-  year={${pub.year}},
-  doi={${pub.doi}}
+  title={\${pub.title}},
+  author={\${pub.authors}},
+  booktitle={\${pub.venue}},
+  year={\${pub.year}},
+  doi={\${pub.doi}}
 }`;
             
             // Copy to clipboard

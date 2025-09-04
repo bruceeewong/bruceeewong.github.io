@@ -1,47 +1,79 @@
-- title: "Paper accepted at ACM HotMobile 2025"
-  date: "2024-12-15"
+- title: "Measurement Paper accepted at ACM IMC '25"
+  date: "2025-08-15"
   category: "publication"
-  icon: "fas fa-file-alt"
-  description: "Our spatial video streaming research on Apple Vision Pro has been accepted for presentation at the premier mobile systems conference."
   link: "#publications"
   highlight: true
 
-- title: "Poster presentation at ACM MobiCom 2024"
-  date: "2024-10-29"
+- title: "Completed internship at AT&T Services, Inc."
+  date: "2025-08-15"
+  category: "achievement"
+  link: null
+  highlight: false
+
+- title: "Started as Research Intern at AT&T Services, Inc."
+  date: "2025-06-02"
+  category: "position"
+  link: null
+  highlight: true
+
+- title: "PhD Qualifying Examination passed"
+  date: "2025-05-19"
+  category: "phd"
+  link: null
+  highlight: false
+
+- title: "Participated as Volunteer with Travel Grant at HotMobile '25 in Palm Springs, CA"
+  date: "2025-02-26"
   category: "presentation"
-  icon: "fas fa-presentation"
-  description: "Presented our first look at Apple's stereoscopic video technology and its potential for live streaming applications."
+  link: "https://hotmobile.org/2025/"
+  highlight: true
+
+
+- title: "Workshop Paper accepted at ACM HotMobile '25"
+  date: "2025-01-24"
+  category: "publication"
+  link: "#publications"
+  highlight: true
+
+- title: "Presented poster paper of MobiCom '24 in Washington D.C."
+  date: "2024-11-18"
+  category: "presentation"
+  link: "https://www.sigmobile.org/mobicom/2024/index.html"
+  highlight: true
+
+- title: "Poster paper accepted at ACM MobiCom '24"
+  date: "2024-09-08"
+  category: "achievement"
   link: "#publications"
   highlight: false
 
-- title: "Workshop paper published at ACM SIGCOMM EMS"
+- title: "Started as Ph.D. Student in NUWiNS Lab at Northeastern University"
+  date: "2024-01-07"
+  category: "phd"
+  link: null
+  highlight: true
+
+- title: "Presented workshop paper of EMS '23 at Columbia University in New York"
   date: "2023-09-10"
-  category: "publication"
-  icon: "fas fa-file-alt"
-  description: "Published measurement study on asynchronous SLAM performance in multi-user AR applications over cellular networks."
-  link: "#publications"
-  highlight: false
+  category: "presentation"
+  link: "https://conferences.sigcomm.org/sigcomm/2023/workshop-ems.html"
+  highlight: true
 
-- title: "PhD research milestone achieved"
-  date: "2023-08-15"
-  category: "academic"
-  icon: "fas fa-graduation-cap"
-  description: "Successfully completed comprehensive examination and advanced to PhD candidacy in wireless networks research."
+- title: "Workshop paper accepted at ACM SIGCOMM EMS '23"
+  date: "2023-07-14"
+  category: "publication"
+  link: "#publications"
+  highlight: true
+
+- title: "Started as Master Student in NUWiNS Lab at Northeastern University"
+  date: "2022-09-07"
+  category: "phd"
   link: null
   highlight: true
 
-- title: "Research collaboration with industry partner"
-  date: "2023-06-20"
-  category: "collaboration"
-  icon: "fas fa-handshake"
-  description: "Initiated research partnership focusing on 5G network optimization for XR applications."
-  link: null
-  highlight: false
-
-- title: "Conference presentation at IEEE INFOCOM"
-  date: "2023-05-17"
-  category: "presentation"
-  icon: "fas fa-microphone"
-  description: "Delivered talk on wireless network performance for emerging mobile applications."
-  link: null
-  highlight: false
+# - title: "Placeholder:Best Paper Award at XXX"
+#   date: "2024-10-15"
+#   category: "award"
+#   description: "Received Best Paper Award for outstanding research contribution in immersive video streaming systems."
+#   link: null
+#   highlight: true
