@@ -54,20 +54,35 @@
     <section id="news" class="section">
         <div class="container">
             <h2>Latest News</h2>
-            <div class="news-container">
-                <div class="news-list">
-                    <% site.data.news.forEach((item, index) => { %>
-                        <div class="news-item">
-                            <span class="news-date"><%= item.date %></span>
-                            <span class="news-content">
-                                <% if (item.link) { %>
-                                    <a href="<%= item.link %>"><%= item.title %></a>
-                                <% } else { %>
-                                    <%= item.title %>
-                                <% } %>
-                            </span>
-                        </div>
-                    <% }); %>
+            <div class="timeline-container">
+                <div class="timeline-scroll">
+                    <div class="timeline-spine"></div>
+                    <div class="timeline-content">
+                        <% site.data.news.forEach((item, index) => { %>
+                            <div class="timeline-item <%= index % 2 === 0 ? 'above' : 'below' %>">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date"><%= item.date %></div>
+                                    <div class="timeline-title">
+                                        <% if (item.link) { %>
+                                            <a href="<%= item.link %>"><%= item.title %></a>
+                                        <% } else { %>
+                                            <%= item.title %>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="timeline-connector"></div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+                <div class="timeline-controls">
+                    <button class="timeline-scroll-btn left" aria-label="Scroll left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="timeline-scroll-btn right" aria-label="Scroll right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -398,6 +413,39 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.remove('fa-times');
         });
     });
+
+    // Timeline horizontal scrolling
+    const timelineScroll = document.querySelector('.timeline-scroll');
+    const scrollLeftBtn = document.querySelector('.timeline-scroll-btn.left');
+    const scrollRightBtn = document.querySelector('.timeline-scroll-btn.right');
+
+    if (timelineScroll && scrollLeftBtn && scrollRightBtn) {
+        scrollLeftBtn.addEventListener('click', function() {
+            timelineScroll.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollRightBtn.addEventListener('click', function() {
+            timelineScroll.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+        // Hide/show scroll buttons based on scroll position
+        function updateScrollButtons() {
+            const isAtStart = timelineScroll.scrollLeft <= 10;
+            const isAtEnd = timelineScroll.scrollLeft >= (timelineScroll.scrollWidth - timelineScroll.clientWidth - 10);
+            
+            scrollLeftBtn.style.opacity = isAtStart ? '0.3' : '1';
+            scrollRightBtn.style.opacity = isAtEnd ? '0.3' : '1';
+        }
+
+        timelineScroll.addEventListener('scroll', updateScrollButtons);
+        updateScrollButtons(); // Initial check
+    }
 });
 </script>
 
