@@ -397,7 +397,7 @@ h3 {
 .timeline-scroll {
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 80px 20px;
+    padding: 120px 20px;
     position: relative;
     scroll-behavior: smooth;
 }
@@ -429,8 +429,8 @@ h3 {
     display: flex;
     position: relative;
     min-width: max-content;
-    gap: 120px;
-    padding: 0 60px;
+    gap: 1rem;
+    padding: 0 1rem;
 }
 
 .timeline-content::before {
@@ -449,21 +449,9 @@ h3 {
 
 .timeline-item {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;
-}
-
-.timeline-item.above {
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.timeline-item.below {
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column-reverse;
+    width: 200px;
+    height: 240px; /* Increased height to accommodate both above and below cards with more spacing */
+    flex-shrink: 0;
 }
 
 .timeline-dot {
@@ -506,25 +494,27 @@ h3 {
     background: white;
     border: 1px solid #e2e8f0;
     border-radius: var(--border-radius);
-    padding: 1rem;
+    padding: 0.75rem;
     box-shadow: 0 2px 8px rgba(26, 54, 93, 0.08);
     transition: var(--transition);
-    max-width: 180px;
+    width: 160px;
     text-align: center;
-    position: relative;
+    position: absolute;
     z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .timeline-item.above .timeline-card {
-    margin-bottom: 150px;
+    bottom: calc(50% + 66px); /* 50% + dot radius + connector height + spacing */
 }
 
 .timeline-item.below .timeline-card {
-    margin-top: 150px;
+    top: calc(50% + 66px); /* 50% + dot radius + connector height + spacing */
 }
 
 .timeline-card:hover {
-    transform: translateY(-2px);
+    transform: translateX(-50%) translateY(-2px);
     box-shadow: 0 4px 12px rgba(26, 54, 93, 0.12);
 }
 
@@ -563,7 +553,7 @@ h3 {
     justify-content: space-between;
     width: 100%;
     pointer-events: none;
-    z-index: 3;
+    z-index: 9;
 }
 
 .timeline-scroll-btn {
@@ -580,7 +570,6 @@ h3 {
     transition: var(--transition);
     pointer-events: auto;
     box-shadow: 0 2px 8px rgba(26, 54, 93, 0.1);
-    z-index: 9;
 }
 
 .timeline-scroll-btn:hover {
@@ -1130,34 +1119,35 @@ h3 {
     
     /* Mobile Timeline */
     .timeline-scroll {
-        padding: 60px 10px;
+        padding: 80px 10px;
     }
     
     .timeline-content {
-        gap: 80px;
-        padding: 0 30px;
+        gap: 1rem;
+        padding: 0 1rem;
     }
     
     .timeline-item {
-        min-width: 150px;
+        width: 150px;
+        height: 200px;
     }
     
     .timeline-card {
-        max-width: 140px;
-        padding: 0.75rem;
+        width: 130px;
+        padding: 0.5rem;
     }
     
     .timeline-item.above .timeline-card {
-        margin-bottom: 45px;
+        bottom: calc(50% + 50px);
     }
     
     .timeline-item.below .timeline-card {
-        margin-top: 45px;
+        top: calc(50% + 50px);
     }
     
     .timeline-date {
         font-size: 0.75rem;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
     }
     
     .timeline-title {
@@ -1165,11 +1155,11 @@ h3 {
     }
     
     .timeline-item.above .timeline-connector {
-        height: 40px;
+        height: 45px;
     }
     
     .timeline-item.below .timeline-connector {
-        height: 40px;
+        height: 45px;
     }
     
     .timeline-controls {
