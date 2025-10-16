@@ -1,11 +1,31 @@
+- title: 'Exploring the 5G Digital Divide in the Non-Contiguous US: LEO Satellites to the Rescue?'
+  authors: "Sizhe Wang, Moinak Ghoshal, Yufei Feng, Imran Khan, Phuc Dinh, Omar Basit, Zhekun Yu, Y. Charlie Hu, Dimitrios Koutsonikolas"
+  year: "2025"
+  venue: "In Proceedings of the ACM International Conference on Measurements and Modeling of Computer Systems (SIGMETRICS 2026), Ann Arbor, Michigan, USA, June 8-12, 2026."
+  type: "conference"
+  tags: ["ACM", "Sigmetrics", "5G", "Cellular Networks", "LEO Satellite Networks", "Measurement Paper", "Multipath", "Emulation", "Digital Divide", "Dataset"]
+  abstract: 5G cellular networks and Low-Earth-Orbit (LEO) satellite networks, such as Starlink, promise enhanced performance and coverage capabilities. While a large number of research works have evaluated these technologies in the mainland US, their performance in non-contiguous US regions remains under-explored, despite their unique challenges and significant visitor demands. Through extensive drive tests covering over 4200+ km across Alaska, Maui (Hawaii), and the mainland US (as a baseline), while simultaneously measuring the performance of the three major US mobile operators and Starlink, this work presents the first detailed evaluation of cellular and Starlink network coverage and performance in the non-contiguous US regions. Our study shows a persistent digital divide between mainland and non-contiguous US for cellular networks in terms of coverage and performance, highlighting the challenges of cellular deployments in non-contiguous US regions. Starlink provides substantially higher performance than cellular networks most of the time, but area-specific challenges, including unique terrains in Hawaii and sparse satellite deployment in Alaska, significantly degrade performance compared to the mainland US. Additionally, we explore the spatiotemporal diversity between cellular and Starlink performance and study the potential of multipath transport to bridge the connectivity gap in non-contiguous US regions.
+  doi: https://doi.org/10.1145/3771568
+  featured: true
+
+- title: 'A First Large-Scale Study of Operational 5G Standalone Networks'
+  authors: "Moinak Ghoshal, Omar Basit, Sizhe Wang, Phuc Dinh, Imran Khan, Yufei Feng, Zhekun Yu, Y. Charlie Hu, Dimitrios Koutsonikolas"
+  year: "2025"
+  venue: "In Proceedings of the 21st ACM International Conference on Emerging Networking EXperiments and Technologies (Co-Next 2025), Hong Kong, Dec 1-4, 2025."
+  type: "conference"
+  tags: ["ACM", "Co-Next", "Measurement Paper", "5G", "Cellular Networks", "5G Standalone"]
+  abstract: "As 5G technology has reached its midlife, mobile operators are increasingly rolling out 5G Standalone (SA), which is pivotal in unlocking the full potential of 5G networks. Prior research has mainly focused on 5G Non-Standalone (NSA) performance, while comprehensive evaluations of operational 5G SA deployments remain scarce. Through two cross-country US driving trips (3200+ km) in 2023 and 2024, we conduct, to the best of our knowledge, the first large-scale study of T-Mobile’s 5G Standalone (SA) deployment in the US, analyzing its evolution while comparing it head-to-head with 5G NSA. Our study shows a shift in the operator’s 5G deployment priorities from 2023 to 2024 in favor of 5G SA compared to 5G NSA, with 5G SA deployments extending across diverse geographical areas. Advanced features, such as higher carrier aggregation with diverse band combinations and new frequency bands with different duplexing capabilities, allow SA to achieve better performance compared to NSA, whose peak performance has plateaued, reflecting limited upgrades as the operator transitions to SA infrastructure. Additionally, we examine the handover duration and uplink power control in SA and NSA networks, offering deeper insights into the operational dynamics of the two modes."
+  doi: https://doi.org/10.1145/3768990
+  featured: false
+
 - title: 'Replication: "Performance of Cellular Networks on the Wheels"'
   authors: "Moinak Ghoshal, Omar Basit, Imran Khan, Z. Jonny Kong, Sizhe Wang, Yufei Feng, Phuc Dinh, Y. Charlie Hu, Dimitrios Koutsonikolas"
   year: "2025"
   venue: "In Proceedings of the 25th ACM Internet Measurement Conference (IMC 2025), Madison, WI, USA, October 28-31, 2025."
   type: "conference"
   tags: ["ACM", "IMC", "Measurement Paper", "5G", "Cellular Networks", "LEO Satellite Networks", "Throughput", "Latency"]
-  abstract: "#"
-  doi: null
+  abstract: In 2022, 3 years after the initial 5G rollout, through a cross-country US driving trip (from Los Angeles to Boston), the authors of [28] conducted an in-depth measurement study of user-perceived experience (network coverage, performance, and QoE of a set of major 5G "killer" apps) over all three major US carriers. The study revealed disappointingly low 5G coverage and suboptimal network performance – falling short of the expectations needed to support the new generation of 5G "killer apps. Now, five years into the 5G era, widely considered its midlife, 5G networks are expected to deliver stable and mature performance. In this work, we replicate the 2022 study along the same coast-to-coast route, evaluating the current state of cellular coverage and network and application performance across all three major US operators. While we observe a substantial increase in 5G coverage and a corresponding boost in network performance, two out of three operators still exhibit less than 50% 5G coverage along the driving route even five years after the initial 5G rollout. We expand the scope of the previous work by analyzing key lower-layer KPIs that directly influence the network performance. Finally, we introduce a head-to-head comparison with Starlink’s LEO satellite network to assess whether emerging non-terrestrial networks (NTNs) can complement the terrestrial cellular infrastructure in the next generation of wireless connectivity.
+  doi: https://doi.org/10.1145/3730567.3764486
   featured: false
 
 - title: "Spatial Video Streaming on Apple Vision Pro XR Headset"
