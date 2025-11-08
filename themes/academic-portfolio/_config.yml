@@ -48,7 +48,7 @@ intro:
       style: secondary
       icon: fas fa-envelope
     - text: "Download CV"
-      url: /Sizhe_Wang_CV.pdf
+      url: /cv/SizheWang-Academic-Resume-202511.pdf
       style: secondary
       icon: fas fa-download
     - text: "Google Scholar"
