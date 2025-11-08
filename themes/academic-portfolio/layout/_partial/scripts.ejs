@@ -12,4 +12,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Go to Top Button functionality
+const goToTopBtn = document.getElementById('go-to-top');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        goToTopBtn.classList.add('visible');
+    } else {
+        goToTopBtn.classList.remove('visible');
+    }
+});
+
+// Scroll to top when button is clicked
+goToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 </script> 
