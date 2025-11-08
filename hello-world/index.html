@@ -109,7 +109,7 @@
                 <header class="post-header">
                     <h1>Hello World</h1>
                     <div class="post-meta">
-                        <time datetime="2025-11-08T18:39:11.465Z">2025-11-08</time>
+                        <time datetime="2025-11-08T18:48:34.753Z">2025-11-08</time>
                         
                     </div>
                 </header>
@@ -156,6 +156,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Go to Top Button functionality
+const goToTopBtn = document.getElementById('go-to-top');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        goToTopBtn.classList.add('visible');
+    } else {
+        goToTopBtn.classList.remove('visible');
+    }
+});
+
+// Scroll to top when button is clicked
+goToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 </script> 
 </body>
 </html> 
@@ -169,6 +189,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         </div>
     </div>
 </footer> 
+
+    <!-- Go to Top Button -->
+    <button id="go-to-top" class="go-to-top" aria-label="Go to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
     <!-- Smooth scrolling for anchor links -->
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -181,6 +209,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+    });
+});
+
+// Go to Top Button functionality
+const goToTopBtn = document.getElementById('go-to-top');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        goToTopBtn.classList.add('visible');
+    } else {
+        goToTopBtn.classList.remove('visible');
+    }
+});
+
+// Scroll to top when button is clicked
+goToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
 </script> 
