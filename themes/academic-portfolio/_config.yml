@@ -43,14 +43,14 @@ intro:
       url: linkedin
       style: primary
       icon: fab fa-linkedin
-    - text: "Download CV"
-      url: /Sizhe_Wang_CV.pdf
-      style: secondary
-      icon: fas fa-download
     - text: "Contact Me"
       url: email
       style: secondary
       icon: fas fa-envelope
+    - text: "Download CV"
+      url: /Sizhe_Wang_CV.pdf
+      style: secondary
+      icon: fas fa-download
     - text: "Google Scholar"
       url: google_scholar
       style: secondary

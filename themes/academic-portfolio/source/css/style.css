@@ -1208,6 +1208,7 @@ h3 {
         display: block;
         text-align: left;
         padding: 2rem 1rem;
+        overflow: hidden;
     }
 
     .intro-image {
@@ -1215,6 +1216,11 @@ h3 {
         max-width: 180px;
         margin: 0 auto 1.5rem auto;
         width: 180px;
+    }
+
+    .intro-text {
+        overflow: hidden;
+        clear: both;
     }
 
     .title-tags {
@@ -1229,6 +1235,19 @@ h3 {
 
     .quick-links {
         justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .quick-links .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        box-sizing: border-box;
     }
 
     .intro-text h1 {
