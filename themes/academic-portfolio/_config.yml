@@ -34,14 +34,13 @@ intro:
     - Data Analyst
     - AI Enthusiast
   narrative:
-    - I am a PhD student of Computer Engineering at Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/koutsonikolas-dimitrios/">Prof. Dimitrios Koutsonikolas</a> in the <a href="https://ece.northeastern.edu/fac-ece/dkoutsonikolas/nuwins/">NUWiNS lab</a>.
-      My research interests span across experimental wireless network studies (5G & LEO satellite networks), mobile and spatial computing, and internet content routing analysis.
-    - Currently, I'm working on concurrent measurement with 5G and LEO satellite networks under mobility across different regions and terrains in US, analyzing the characteristics of digital divide
-      as well as exploring the potential of synergy of 5G and LEO satellite networks.
-    - I'm passionate about bridging the gap between theoretical research and practical applications, always striving to develop solutions that can make a real impact in the field of mobile networked systems.
+    - "I am currently a second-year Ph.D. student in Computer Engineering at Northeastern University (Boston Campus), advised by <a href=\"https://ece.northeastern.edu/fac-ece/dkoutsonikolas/\">Prof. Dimitrios Koutsonikolas</a> in the <a href=\"https://ece.northeastern.edu/fac-ece/dkoutsonikolas/nuwins/\">NUWiNS lab</a>. My research focuses on 6G wireless networks, particularly the critical role of Low Earth Orbit (LEO) satellite networks in the architecture of next-generation communication systems."
+    - "My research interests include wireless network measurement and analysis (5G/LEO), virtual and augmented reality (VR/AR), on-demand and live video streaming, graph neural networks (GNNs) and machine learning, Internet content routing, and large-scale network data analytics. Currently, my primary research investigates the performance characterization and system analysis of Starlink, the leading LEO satellite network in the United States, as well as its impact on mainstream Internet applications."
+    - "I have published several papers in top-tier international conferences, including: “Exploring the 5G Digital Divide in the Non-Contiguous US: LEO Satellites to the Rescue?” (ACM SIGMETRICS ’26, CCF-B), “A First Large-Scale Study of Operational 5G Standalone Networks” (ACM CoNEXT ’25, CCF-B), “Replication: Performance of Cellular Networks on the Wheels” (ACM IMC ’25, CCF-B), “Spatial Video Streaming on Apple Vision Pro XR Headset” (ACM HotMobile ’25, co-first author), and a poster at ACM MobiCom ’24 and workshop paper at ACM SIGCOMM ’23. These works collectively reveal key challenges and opportunities in connectivity, performance, and user experience of emerging wireless systems, reflecting my continuous dedication to experimental measurement, system design, and cross-domain exploration."
+    - "My academic aspiration is to use LEO satellite networks as an entry point to explore the evolution from 5G toward 6G, advancing universal Internet connectivity so that any device can access the network from any corner of the Earth. In the long term, I aim to further study interplanetary wireless communication architectures between Earth–Moon and Earth–Mars. I firmly believe that the next generation of wireless networks will become the communication foundation for humanity’s expansion from Earth to space — <b>weaving a network of stars to connect all things.</b>"
   buttons:
     cv:
-      text: Download CV
+      text: "Download CV"
       url: /Sizhe_Wang_CV.pdf
     contact:
       text: Contact Me
