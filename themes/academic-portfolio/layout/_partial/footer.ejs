@@ -1,19 +1,5 @@
 <footer class="site-footer">
     <div class="container">
-        <div class="social-links">
-            <% if (theme.social.google_scholar) { %>
-                <a href="<%= theme.social.google_scholar %>" target="_blank">Google Scholar</a>
-            <% } %>
-            <% if (theme.social.linkedin) { %>
-                <a href="<%= theme.social.linkedin %>" target="_blank">LinkedIn</a>
-            <% } %>
-            <% if (theme.social.github) { %>
-                <a href="<%= theme.social.github %>" target="_blank">GitHub</a>
-            <% } %>
-            <% if (theme.social.email) { %>
-                <a href="mailto:<%= theme.social.email %>">Email</a>
-            <% } %>
-        </div>
         <div class="copyright">
             <p>Copyright © <%= new Date().getFullYear() %> <%= theme.footer.copyright %></p>
             <p><%= theme.footer.powered_by %></p>

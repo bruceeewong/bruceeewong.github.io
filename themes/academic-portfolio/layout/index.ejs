@@ -30,8 +30,34 @@
                         <% }); %>
                     </div>
                     <div class="quick-links">
-                        <a href="<%= theme.intro.buttons.cv.url %>" class="btn btn-primary"><%= theme.intro.buttons.cv.text %></a>
-                        <a href="<%= theme.intro.buttons.contact.url %>" class="btn btn-secondary"><%= theme.intro.buttons.contact.text %></a>
+                        <% theme.intro.buttons.forEach(function(button) {
+                            // Resolve URL based on button configuration
+                            let buttonUrl = button.url;
+                            let isExternal = false;
+
+                            // Check if URL is a reference to social links
+                            if (button.url === 'linkedin' && theme.social.linkedin) {
+                                buttonUrl = theme.social.linkedin;
+                                isExternal = true;
+                            } else if (button.url === 'email' && theme.social.email) {
+                                buttonUrl = 'mailto:' + theme.social.email;
+                            } else if (button.url === 'google_scholar' && theme.social.google_scholar) {
+                                buttonUrl = theme.social.google_scholar;
+                                isExternal = true;
+                            } else if (button.url === 'github' && theme.social.github) {
+                                buttonUrl = theme.social.github;
+                                isExternal = true;
+                            }
+
+                            // Only render if we have a valid URL
+                            if (buttonUrl) { %>
+                                <a href="<%= buttonUrl %>"
+                                   class="btn btn-<%= button.style || 'secondary' %>"
+                                   <%= isExternal ? 'target="_blank"' : '' %>>
+                                    <% if (button.icon) { %><i class="<%= button.icon %>"></i> <% } %><%= button.text %>
+                                </a>
+                            <% }
+                        }); %>
                     </div>
                 </div>
             </div>
