@@ -167,7 +167,7 @@
             <!-- Publications List -->
             <div class="publications-list">
                 <% site.data.publications.forEach((pub, index) => { %>
-                    <div class="publication-item" data-type="<%= pub.type %>" data-tags="<%= pub.tags ? pub.tags.join(',') : '' %>">
+                    <div id="<%= pub.id %>" class="publication-item" data-type="<%= pub.type %>" data-tags="<%= pub.tags ? pub.tags.join(',') : '' %>">
                         <div class="publication-header">
                             <h3 class="publication-title">
                                 <%= pub.title %>

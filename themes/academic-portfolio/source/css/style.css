@@ -824,11 +824,27 @@ h3 {
     box-shadow: 0 2px 4px rgba(26, 54, 93, 0.1);
     border: 1px solid rgba(26, 54, 93, 0.1);
     transition: var(--transition);
+    scroll-margin-top: calc(var(--header-height) + 2rem);
 }
 
 .publication-item:hover {
     box-shadow: 0 4px 8px rgba(26, 54, 93, 0.15);
     transform: translateY(-2px);
+}
+
+.publication-item:target {
+    animation: highlightPub 2s ease;
+}
+
+@keyframes highlightPub {
+    0% {
+        background-color: rgba(44, 82, 130, 0.15);
+        box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.3);
+    }
+    100% {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(26, 54, 93, 0.1);
+    }
 }
 
 .publication-header {

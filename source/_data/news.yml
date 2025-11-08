@@ -1,19 +1,19 @@
 - title: "Measurement Paper accepted at ACM SIGMETRICS '26"
   date: "2025-09-26"
   category: "publication"
-  link: "#publications"
+  link: "#sigmetrics-2026-5g-digital-divide"
   highlight: true
 
 - title: "Measurement Paper accepted at ACM Co-Next '25"
   date: "2025-09-13"
   category: "publication"
-  link: "#publications"
+  link: "#conext-2025-5g-standalone"
   highlight: true
 
 - title: "Measurement Paper accepted at ACM IMC '25"
   date: "2025-08-15"
   category: "publication"
-  link: "#publications"
+  link: "#imc-2025-cellular-networks-on-wheels"
   highlight: true
 
 - title: "Completed internship at AT&T Services, Inc."
@@ -44,19 +44,19 @@
 - title: "Workshop Paper accepted at ACM HotMobile '25"
   date: "2025-01-24"
   category: "publication"
-  link: "#publications"
+  link: "#hotmobile-2025-spatial-video-streaming"
   highlight: true
 
 - title: "Presented poster paper of MobiCom '24 in Washington D.C."
   date: "2024-11-18"
   category: "presentation"
-  link: "https://www.sigmobile.org/mobicom/2024/index.html"
+  link: "#mobicom-2024-stereoscopic-video-poster"
   highlight: true
 
 - title: "Poster paper accepted at ACM MobiCom '24"
   date: "2024-09-08"
   category: "publication"
-  link: "#publications"
+  link: "#mobicom-2024-stereoscopic-video-poster"
   highlight: false
 
 - title: "Started as Ph.D. Student in NUWiNS Lab at Northeastern University"
@@ -68,13 +68,13 @@
 - title: "Presented workshop paper of EMS '23 at Columbia University in New York"
   date: "2023-09-10"
   category: "presentation"
-  link: "https://conferences.sigcomm.org/sigcomm/2023/workshop-ems.html"
+  link: "#sigcomm-ems-2023-async-slam"
   highlight: true
 
 - title: "Workshop paper accepted at ACM SIGCOMM EMS '23"
   date: "2023-07-14"
   category: "publication"
-  link: "#publications"
+  link: "#sigcomm-ems-2023-async-slam"
   highlight: true
 
 - title: "Started as Master Student at Northeastern University"
