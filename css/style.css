@@ -1013,6 +1013,23 @@ h3 {
     color: white;
 }
 
+.filter-count {
+    display: inline-block;
+    min-width: 1.2em;
+    margin-left: 0.35rem;
+    padding: 0 0.4em;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.08);
+    font-size: 0.8em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.filter-button.active .filter-count,
+.filter-button:hover .filter-count {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
 /* Tag Filters */
 .tag-filters {
     display: flex;
