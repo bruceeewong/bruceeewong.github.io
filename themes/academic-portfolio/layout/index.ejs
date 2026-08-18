@@ -145,10 +145,17 @@
             <h2>Publications</h2>
             <!-- Filters -->
             <div class="publication-filters">
+                <%
+                    const pubCounts = { all: site.data.publications.length };
+                    site.data.publications.forEach(p => {
+                        pubCounts[p.type] = (pubCounts[p.type] || 0) + 1;
+                    });
+                %>
                 <div class="type-filters">
-                    <button class="filter-button active" data-filter="all">All</button>
-                    <button class="filter-button" data-filter="workshop">Workshops</button>
-                    <button class="filter-button" data-filter="poster">Posters</button>
+                    <button class="filter-button active" data-filter="all">All <span class="filter-count"><%= pubCounts.all %></span></button>
+                    <button class="filter-button" data-filter="conference">Conference <span class="filter-count"><%= pubCounts.conference || 0 %></span></button>
+                    <button class="filter-button" data-filter="workshop">Workshop <span class="filter-count"><%= pubCounts.workshop || 0 %></span></button>
+                    <button class="filter-button" data-filter="poster">Poster <span class="filter-count"><%= pubCounts.poster || 0 %></span></button>
                     <!-- <button class="filter-button" data-filter="journal">Journals</button> -->
                     <!-- <button class="filter-button" data-filter="book">Books</button> -->
                 </div>
@@ -219,9 +226,9 @@
                                     <i class="fas fa-link"></i> DOI
                                 </a>
                             <% } %>
-                            <% if (pub.code) { %>
-                                <a href="<%= pub.code %>" class="publication-action" target="_blank">
-                                    <i class="fab fa-github"></i> Code
+                            <% if (pub.dataset) { %>
+                                <a href="<%= pub.dataset %>" class="publication-action" target="_blank">
+                                    <i class="fas fa-database"></i> Dataset
                                 </a>
                             <% } %>
                             <button class="publication-action citation-copy" data-pub="<%= index %>">

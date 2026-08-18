@@ -1,3 +1,15 @@
+- title: "Completed internship at AT&T Research Lab"
+  date: "2026-08-15"
+  category: "achievement"
+  link: null
+  highlight: false
+
+- title: "Workshop Paper accepted at ACM SIGCOMM LEO-NET '26"
+  date: "2026-06-11"
+  category: "publication"
+  link: "#leonet-2026-starlink-pop-satellite"
+  highlight: true
+
 - title: "Measurement Paper accepted at ACM SIGMETRICS '26"
   date: "2025-09-26"
   category: "publication"
@@ -16,13 +28,13 @@
   link: "#imc-2025-cellular-networks-on-wheels"
   highlight: true
 
-- title: "Completed internship at AT&T Services, Inc."
+- title: "Completed internship at AT&T Research Lab"
   date: "2025-08-15"
   category: "achievement"
   link: null
   highlight: false
 
-- title: "Started as Research Intern at AT&T Services, Inc."
+- title: "Started as Research Intern at AT&T Research Lab"
   date: "2025-06-02"
   category: "position"
   link: null

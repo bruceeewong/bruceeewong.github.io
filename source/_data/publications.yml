@@ -1,3 +1,15 @@
+- id: leonet-2026-starlink-pop-satellite
+  title: "A Cross-US View of Starlink's PoP and Satellite Assignment Strategy to Mobile Users"
+  authors: "Sizhe Wang, Jinwei Zhao, Yufei Feng, Zhekun Yu, Jianping Pan, Dimitrios Koutsonikolas"
+  year: "2026"
+  venue: "In Proceedings of the ACM SIGCOMM 2026 Workshop on LEO Networking and Communications (LEO-NET '26), Denver, CO, USA."
+  type: "workshop"
+  tags: ["ACM", "SIGCOMM", "LEO-NET", "Workshop Paper", "LEO Satellite Networks", "Starlink", "Measurement Paper", "PoP", "Satellite Assignment", "Mobility", "Dataset"]
+  abstract: "Starlink, a leading global broadband provider built on a Low-Earth-Orbit (LEO) satellite network, is rapidly expanding dedicated mobility plans for land, maritime, and aviation users. While several recent works have studied various aspects of the Starlink network, the policies governing how Starlink assigns Points of Presence (PoPs) and orbital satellites to mobile users remain largely unknown. In this paper, we present the first country-scale view of Starlink's PoP and satellite assignment strategy to mobile users in the US. Through a 6,100 km cross-country driving campaign from Boston to Los Angeles in August 2025 covering 7 Starlink PoPs, we curate a multifaceted dataset spanning TCP throughput, latency, user terminal telemetry, DNS-based PoP identification, and satellite ephemeris. We report three key findings. First, PoP-to-user assignment in the mainland US follows a Voronoi tessellation over available PoP locations, with principled adjustments for administrative boundaries, regional IXP capacity, content availability, and maritime support. Second, PoP-level performance shows substantial regional diversity, with median TCP downlink throughput varying nearly twofold across PoPs. Third, Starlink V2 and V1 satellite generations are uniformly assigned to our terminal, and marginal throughput and latency differences across the dominant generation-inclination combinations (V2@43° and V1@53°) indicate that per-beam load rather than satellite capability governs user-perceived performance."
+  doi: "10.1145/3789240.3827596"
+  dataset: "https://github.com/NUWiNS/LEONET26-A-Cross-US-View-of-Starlink-PoP-and-Satellite-Assignment-Strategy-to-Mobile-Users"
+  featured: false
+
 - id: sigmetrics-2026-5g-digital-divide
   title: 'Exploring the 5G Digital Divide in the Non-Contiguous US: LEO Satellites to the Rescue?'
   authors: "Sizhe Wang, Moinak Ghoshal, Yufei Feng, Imran Khan, Phuc Dinh, Omar Basit, Zhekun Yu, Y. Charlie Hu, Dimitrios Koutsonikolas"
@@ -7,6 +19,7 @@
   tags: ["ACM", "Sigmetrics", "5G", "Cellular Networks", "LEO Satellite Networks", "Measurement Paper", "Multipath", "Emulation", "Digital Divide", "Dataset"]
   abstract: 5G cellular networks and Low-Earth-Orbit (LEO) satellite networks, such as Starlink, promise enhanced performance and coverage capabilities. While a large number of research works have evaluated these technologies in the mainland US, their performance in non-contiguous US regions remains under-explored, despite their unique challenges and significant visitor demands. Through extensive drive tests covering over 4200+ km across Alaska, Maui (Hawaii), and the mainland US (as a baseline), while simultaneously measuring the performance of the three major US mobile operators and Starlink, this work presents the first detailed evaluation of cellular and Starlink network coverage and performance in the non-contiguous US regions. Our study shows a persistent digital divide between mainland and non-contiguous US for cellular networks in terms of coverage and performance, highlighting the challenges of cellular deployments in non-contiguous US regions. Starlink provides substantially higher performance than cellular networks most of the time, but area-specific challenges, including unique terrains in Hawaii and sparse satellite deployment in Alaska, significantly degrade performance compared to the mainland US. Additionally, we explore the spatiotemporal diversity between cellular and Starlink performance and study the potential of multipath transport to bridge the connectivity gap in non-contiguous US regions.
   doi: https://doi.org/10.1145/3771568
+  dataset: "https://github.com/NUWiNS/sigmetrics26-exploring-the-5g-digital-divide-in-the-non-contiguous-us-leo-satellites-to-the-rescue"
   featured: true
 
 - id: conext-2025-5g-standalone
